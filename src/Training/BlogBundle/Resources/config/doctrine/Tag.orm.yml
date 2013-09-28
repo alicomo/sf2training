@@ -1,0 +1,18 @@
+Training\BlogBundle\Entity\Tag:
+    type: entity
+    table: training_blog_tag
+    repositoryClass: Training\BlogBundle\Entity\TagRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        name:
+            type: string
+            length: 255
+    manyToMany:
+        posts:
+          targetEntity: Post
+          mappedBy: tags
+    lifecycleCallbacks: {  }

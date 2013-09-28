@@ -1,0 +1,7 @@
+training_blog_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: TrainingBlogBundle:Default:index }
+
+training_blog_post:
+        resource: "@TrainingBlogBundle/Resources/config/routing/post.yml"
+        prefix:   /post

@@ -1,0 +1,19 @@
+Training\BlogBundle\Entity\Category:
+    type: entity
+    table: training_blog_category
+    repositoryClass: Training\BlogBundle\Entity\CategoryRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        name:
+            type: string
+            length: 255
+    oneToMany:
+        posts:
+          targetEntity: Post
+          mappedBy: category
+          cascade: [persist, remove]
+    lifecycleCallbacks: {  }
