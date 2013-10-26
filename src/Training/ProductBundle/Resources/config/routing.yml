@@ -1,0 +1,3 @@
+training_product_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: TrainingProductBundle:Default:index }

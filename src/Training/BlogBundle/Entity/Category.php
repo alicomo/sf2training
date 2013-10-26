@@ -97,4 +97,17 @@ class Category
     {
         return $this->posts;
     }
+
+    /**
+     * Set posts
+     *
+     * @param \Training\BlogBundle\Entity\Category $posts
+     * @return Category
+     */
+    public function setPosts(\Training\BlogBundle\Entity\Category $posts = null)
+    {
+        $this->posts = $posts;
+    
+        return $this;
+    }
 }

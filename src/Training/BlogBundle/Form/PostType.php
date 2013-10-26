@@ -19,6 +19,12 @@ class PostType extends AbstractType
             ->add('excerpt')
             ->add('body')
             ->add('author')
+            ->add('category', 'entity',
+                array(
+                    'class' => 'TrainingBlogBundle:Category',
+                    'property' => 'name'
+                )
+            )
             ->add('enabled', null, array(
                     'required' => false,
                     'label' => 'Published',

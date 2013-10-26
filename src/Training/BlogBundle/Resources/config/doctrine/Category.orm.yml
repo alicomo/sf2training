@@ -11,9 +11,10 @@ Training\BlogBundle\Entity\Category:
         name:
             type: string
             length: 255
-    oneToMany:
+    manyToOne:
         posts:
-          targetEntity: Post
-          mappedBy: category
-          cascade: [persist, remove]
+          targetEntity: Category
+          joinColumn:
+            name: category_id
+            referencedColumnName: id
     lifecycleCallbacks: {  }

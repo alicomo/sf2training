@@ -1,0 +1,25 @@
+Training\ProductBundle\Entity\Category:
+    type: entity
+    table: training_category
+    repositoryClass: Training\ProductBundle\Entity\CategoryRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        name:
+            type: string
+            length: 255
+        createdAt:
+            type: datetime
+            column: created_at
+        updatedAt:
+            type: datetime
+            column: updated_at
+    manyToMany:
+        products:
+          targetEntity: Training\ProductBundle\Entity\Product
+          mappedBy: categories
+    lifecycleCallbacks:
+        prePersist: [prePesist]

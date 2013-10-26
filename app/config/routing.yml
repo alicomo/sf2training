@@ -1,3 +1,7 @@
+training_product:
+    resource: "@TrainingProductBundle/Controller"
+    prefix:   /stock
+
 training_blog:
     resource: "@TrainingBlogBundle/Resources/config/routing.yml"
     prefix:   /
